@@ -27,15 +27,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Shared", "5 - Shared", "{DBA10D04-2218-4915-AFF0-D1A1829FF479}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleArchitecture.Minimal.Api", "SimpleArchitecture.Minimal.Api\SimpleArchitecture.Minimal.Api.csproj", "{71D54783-183B-4DE0-B459-05E6CBB1BE9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleArchitecture.Minimal.Api", "SimpleArchitecture.Minimal.Api\SimpleArchitecture.Minimal.Api.csproj", "{71D54783-183B-4DE0-B459-05E6CBB1BE9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleArchiteture.Service", "SimpleArchiteture.Service\SimpleArchiteture.Service.csproj", "{0E2D6409-4346-471C-8374-C6554F3F0A1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleArchiteture.Service", "SimpleArchiteture.Service\SimpleArchiteture.Service.csproj", "{0E2D6409-4346-471C-8374-C6554F3F0A1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleArchiteture.Data", "SimpleArchiteture.Data\SimpleArchiteture.Data.csproj", "{153CD635-B8F7-484C-91EA-FCE04D2F95EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleArchiteture.Data", "SimpleArchiteture.Data\SimpleArchiteture.Data.csproj", "{153CD635-B8F7-484C-91EA-FCE04D2F95EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleArchiteture.Domain", "SimpleArchiteture.Domain\SimpleArchiteture.Domain.csproj", "{7CF03967-4F21-4FFD-8C17-0A22539B5046}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleArchiteture.Domain", "SimpleArchiteture.Domain\SimpleArchiteture.Domain.csproj", "{7CF03967-4F21-4FFD-8C17-0A22539B5046}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleArchiteture.Shared", "SimpleArchiteture.Shared\SimpleArchiteture.Shared.csproj", "{2E6BF905-E131-415A-BE58-F80B045E7C9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleArchiteture.Shared", "SimpleArchiteture.Shared\SimpleArchiteture.Shared.csproj", "{2E6BF905-E131-415A-BE58-F80B045E7C9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D7926670-D56E-4365-B677-9D4A6B4D62F8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
