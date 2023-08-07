@@ -33,8 +33,4 @@
     <ProjectReference Include="..\SimpleArchiteture.Domain\SimpleArchiteture.Domain.csproj" />
     <ProjectReference Include="..\SimpleArchiteture.Shared\SimpleArchiteture.Shared.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
 </Project>
