@@ -16,4 +16,8 @@
     <ProjectReference Include="..\SimpleArchiteture.Shared\SimpleArchiteture.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
 </Project>

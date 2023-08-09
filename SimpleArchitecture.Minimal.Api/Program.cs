@@ -1,8 +1,4 @@
-
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using SimpleArchiteture.Data.EfConfig;
-using System;
+using SimpleArchiteture.Data;
 
 namespace SimpleArchitecture.Minimal.Api
 {
@@ -16,9 +12,8 @@ namespace SimpleArchitecture.Minimal.Api
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddDbContext<ApplicationDbContext>(
-                options => options.UseSqlServer(builder.Configuration.GetConnectionString("appDb"), 
-                x => x.MigrationsAssembly("SimpleArchitecture.Minimal.Api")));
+            builder.Services.AddDataLayer(builder.Configuration);
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

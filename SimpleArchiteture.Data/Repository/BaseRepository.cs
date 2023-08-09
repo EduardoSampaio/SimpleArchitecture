@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using SimpleArchiteture.Data.Interfaces;
 using System.Linq.Expressions;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace SimpleArchiteture.Data.Repository;
 
@@ -50,6 +51,23 @@ public abstract class BaseRepository<TEntity, TKey> : IBaseRepository<TEntity, T
         return await _dbSet.AsNoTracking().Where(filter).ToListAsync();
     }
 
+    public async Task<IEnumerable<TEntity>> GetAllAsync(int? limit = null, int? skip = null)
+    {
+        IQueryable<TEntity> query = _dbSet;
+
+        if (skip.HasValue)
+        {
+            query = query.Skip(skip.Value);
+        }
+
+        if (limit.HasValue)
+        {
+            query = query.Take(limit.Value);
+        }
+
+        return await query.AsNoTracking().ToListAsync();
+    }
+
     public virtual async Task<TEntity> GetByIdAsync(TKey id)
     {
         return await _dbSet.FindAsync(id);
@@ -57,7 +75,7 @@ public abstract class BaseRepository<TEntity, TKey> : IBaseRepository<TEntity, T
 
     public virtual async Task<IEnumerable<TEntity>> GetManyAsync(Expression<Func<TEntity, bool>> filter = null,
         Func<IQueryable<TEntity>,
-        IOrderedQueryable<TEntity>> orderBy = null, int? top = null, int? skip = null,
+        IOrderedQueryable<TEntity>> orderBy = null, int? limit = null, int? skip = null,
         params string[] includeProperties)
     {
         IQueryable<TEntity> query = _dbSet;
@@ -82,9 +100,9 @@ public abstract class BaseRepository<TEntity, TKey> : IBaseRepository<TEntity, T
             query = query.Skip(skip.Value);
         }
 
-        if (top.HasValue)
+        if (limit.HasValue)
         {
-            query = query.Take(top.Value);
+            query = query.Take(limit.Value);
         }
 
         return await query.AsNoTracking().ToListAsync();

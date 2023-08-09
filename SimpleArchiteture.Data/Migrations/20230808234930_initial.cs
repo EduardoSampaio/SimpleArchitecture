@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace SimpleArchitecture.Minimal.Api.Migrations
+namespace SimpleArchiteture.Data.Migrations
 {
     /// <inheritdoc />
     public partial class initial : Migration

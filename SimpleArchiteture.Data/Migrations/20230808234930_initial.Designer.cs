@@ -9,10 +9,10 @@ using SimpleArchiteture.Data.EfConfig;
 
 #nullable disable
 
-namespace SimpleArchitecture.Minimal.Api.Migrations
+namespace SimpleArchiteture.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230807015410_initial")]
+    [Migration("20230808234930_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace SimpleArchitecture.Minimal.Api.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.9")
+                .HasAnnotation("ProductVersion", "7.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);

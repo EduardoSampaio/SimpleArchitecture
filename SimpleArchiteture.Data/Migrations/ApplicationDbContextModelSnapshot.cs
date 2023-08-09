@@ -8,7 +8,7 @@ using SimpleArchiteture.Data.EfConfig;
 
 #nullable disable
 
-namespace SimpleArchitecture.Minimal.Api.Migrations
+namespace SimpleArchiteture.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -17,7 +17,7 @@ namespace SimpleArchitecture.Minimal.Api.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.9")
+                .HasAnnotation("ProductVersion", "7.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
